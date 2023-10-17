@@ -80,10 +80,8 @@ WSGI_APPLICATION = 'gym.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.p',
-        'NAME': 'Gym',
-        'USER': 'Nati',
-        'PASSWORD': 'Natiman776.s',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
