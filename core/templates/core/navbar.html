@@ -1,0 +1,107 @@
+<section>
+<div class="offcanvas-menu-overlay"></div>
+<div class="offcanvas-menu-wrapper">
+    <div class="canvas-close">
+        <i class="fa fa-close"></i>
+    </div>
+    <div class="canvas-search search-switch">
+        <i class="fa fa-search"></i>
+    </div>
+    <nav class="canvas-menu mobile-menu">
+        <ul>
+            <li><a href="{% url '' %}">Home</a></li>
+            <li><a href="{% url '' %}">About Us</a></li>
+            <li><a href="{% url '' %}">Classes</a></li>
+            <li><a href="{% url '' %}">Services</a></li>
+            <li><a href="{% url '' %}">Our Team</a></li>
+            <li><a href="#">Pages</a>
+                <ul class="dropdown">
+                    <li><a href="{% url '' %}">About us</a></li>
+                    <li><a href="{% url '' %}">Classes timetable</a></li>
+                    <li><a href="{% url '' %}">Bmi calculate</a></li>
+                    <li><a href="{% url '' %}">Our team</a></li>
+                    <li><a href="{% url '' %}">Gallery</a></li>
+                    <li><a href="{% url '' %}">Our blog</a></li>
+                    <li><a href="{% url '' %}">404</a></li>
+                </ul>
+            </li>
+            <li><a href="{% url '' %}">Contact</a></li>
+
+            
+            
+            
+        </ul>
+    </nav>
+    <div id="mobile-menu-wrap"></div>
+    <div class="canvas-social">
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-youtube-play"></i></a>
+        <a href="#"><i class="fa fa-instagram"></i></a>
+    </div>
+</div>
+<!-- Offcanvas Menu Section End -->
+
+<!-- Header Section Begin -->
+<header class="header-section">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="logo">
+                    <a href="{% url '' %}">
+                        <img src="img/logo.png" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <nav class="nav-menu">
+                    <ul>
+                        <li class="active"><a href="{% url '' %}">Home</a></li>
+                        <li><a href="{% url '' %}">About Us</a></li>
+                        <li><a href="{% url '' %}">Classes</a></li>
+                        <li><a href="{% url '' %}">Services</a></li>
+                        <li><a href="{% url '' %}">Our Team</a></li>
+                        <li><a href="#">Pages</a>
+                            <ul class="dropdown">
+                                <li><a href="{% url '' %}">About us</a></li>
+                                <li><a href="{% url '' %}">Classes timetable</a></li>
+                                <li><a href="{% url '' %}">Bmi calculate</a></li>
+                                <li><a href="{% url '' %}">Our team</a></li>
+                                <li><a href="{% url '' %}">Gallery</a></li>
+                                <li><a href="{% url '' %}">Our blog</a></li>
+                                <li><a href="{% url '' %}">404</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="{% url '' %}">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="col-lg-3">
+                <div class="top-option">
+                    <div class="to-social">
+
+                        
+
+        {% if user.is_authenticated %}
+        <li><a href="{% url 'dashboard' %}" class="primary-btn">Dashboard</a></li>
+        <li><a href="{% url 'logout' %}" class="primary-btn">Sign out</a></li>
+                        
+        
+        
+        {% else %}
+        <li><a href="{% url 'register' %}" class="primary-btn">Sign In/Sign Up</a></li>
+
+
+        {% endif %}
+
+        
+                        </div>
+                </div>
+            </div>
+        </div>
+        <div class="canvas-open">
+            <i class="fa fa-bars"></i>
+        </div>
+    </div>
+</header>
+</section>
